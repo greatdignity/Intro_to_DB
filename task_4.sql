@@ -1,7 +1,3 @@
--- task_4.sql
--- Script to print the full description of the 'books' table
--- without using DESCRIBE or EXPLAIN
-
 SELECT 
     COLUMN_NAME AS FIELD,
     COLUMN_TYPE AS TYPE,

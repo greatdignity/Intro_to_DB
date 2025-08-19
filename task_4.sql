@@ -2,15 +2,13 @@
 -- Script to print the full description of the 'books' table
 -- without using DESCRIBE or EXPLAIN
 
-USE alx_book_store;
-
 SELECT 
-    COLUMN_NAME AS Field,
-    COLUMN_TYPE AS Type,
-    IS_NULLABLE AS 'Null',
-    COLUMN_KEY AS 'Key',
-    COLUMN_DEFAULT AS 'Default',
-    EXTRA AS Extra
+    COLUMN_NAME AS FIELD,
+    COLUMN_TYPE AS TYPE,
+    IS_NULLABLE AS 'NULL',
+    COLUMN_KEY AS 'KEY',
+    COLUMN_DEFAULT AS 'DEFAULT',
+    EXTRA AS EXTRA
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = 'alx_book_store'
+WHERE TABLE_SCHEMA = DATABASE()
   AND TABLE_NAME = 'books';
